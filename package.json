@@ -1,0 +1,14 @@
+{
+  "name": "js-validation",
+  "version": "1.0.0",
+  "description": "Javascript validations made easy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "validation"
+  ],
+  "author": "sai umesh",
+  "license": "MIT"
+}
