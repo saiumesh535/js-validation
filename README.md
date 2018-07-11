@@ -12,7 +12,7 @@ npm i js-validation-check
 
 ###Example
 
-```
+```js
 
 const validation = require('js-validation-check');
 
