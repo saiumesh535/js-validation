@@ -1,11 +1,19 @@
 {
   "name": "js-validation-check",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Javascript validations made easy",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bugs": {
+    "url": "https://github.com/saiumesh535/js-validation/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saiumesh535/js-validation"
+  },
+  "homepage": "https://github.com/saiumesh535/js-validation",
   "keywords": [
     "validation",
     "js-validation"
