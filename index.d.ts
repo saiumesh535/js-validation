@@ -1,13 +1,14 @@
-export interface types {
-  email: string;
-  number: number;
-  boolean: Boolean;
+export type Types = 'email' | 'number' | 'boolean';
+
+
+export interface IValidation {
+  min?: number;
+  max?: number;
+  type?: Types;
 }
 
-export interface config {
-  min: number;
-  max: number;
-  type: types;
+export interface IConfig {
+  [key : string]: IValidation
 }
 
 export interface Ireturn {
@@ -16,4 +17,4 @@ export interface Ireturn {
   value: any;
 }
 
-export declare function validate(input: Object, config: Object): Array<Ireturn>;
+export declare function validate(input: Object, config: IConfig): Ireturn[];
