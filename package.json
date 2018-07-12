@@ -4,7 +4,7 @@
   "description": "Javascript validations made easy",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc --watch"
   },
   "bugs": {
     "url": "https://github.com/saiumesh535/js-validation/issues"
