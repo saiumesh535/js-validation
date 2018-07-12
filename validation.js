@@ -1,27 +1,25 @@
-module.exports = {
-  checkForMissingData: function (input, config) {
-    const inputKeys = Object.keys(input);
-    const configKeys = Object.keys(config);
-    const errors = configKeys.reduce((cumm, data) => {
-      if (inputKeys.indexOf(data) === -1) {
-        return [...cumm, { for: data, errorType: 'data missing' }]
-      }
+export function checkForMissingData(input, config) {
+  const inputKeys = Object.keys(input);
+  const configKeys = Object.keys(config);
+  const errors = configKeys.reduce((cumm, data) => {
+    if (inputKeys.indexOf(data) === -1) {
+      return [...cumm, { for: data, errorType: 'data missing' }];
+    }
+    return cumm;
+  }, []);
+  return errors;
+}
+export function validate(input, config) {
+  /* get keys from input and pass key, input and config */
+  const errors = Object.keys(input).reduce((cumm, value) => {
+    if (Boolean(config[value])) {
+      return [...cumm, ...doValidation(value, input, config)];
+    }
+    else {
       return cumm;
-    }, [])
-    return errors;
-  },
-
-  validate: function (input, config) {
-    /* get keys from input and pass key, input and config */
-    const errors = Object.keys(input).reduce((cumm, value) => {
-      if (Boolean(config[value])) {
-        return [...cumm, ...doValidation(value, input, config)];
-      } else {
-        return cumm;
-      }
-    }, [])
-    return errors;
-  }
+    }
+  }, []);
+  return errors;
 }
 
 function doValidation(key, input, config) {
