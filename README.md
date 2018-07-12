@@ -27,7 +27,7 @@ const input = {
   name: 'sai umesh'
 }
 
-console.log(validation.validation(input, config));
+console.log(validation.validate(input, config));
 
 
 ```

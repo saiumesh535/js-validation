@@ -1,7 +1,7 @@
 const validation = require('./validation');
 
 
-exports.validation = function(input, config){
+exports.validate = function(input, config){
   if(input === undefined || typeof input !== 'object') {
     throw new Error('Input should be object, also not undefined');
   }
