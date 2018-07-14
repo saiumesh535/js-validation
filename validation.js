@@ -1,4 +1,4 @@
-export function checkForMissingData(input, config) {
+exports.checkForMissingData = function (input, config) {
   const inputKeys = Object.keys(input);
   const configKeys = Object.keys(config);
   const errors = configKeys.reduce((cumm, data) => {
@@ -9,7 +9,7 @@ export function checkForMissingData(input, config) {
   }, []);
   return errors;
 }
-export function validate(input, config) {
+exports.validate = function (input, config) {
   /* get keys from input and pass key, input and config */
   const errors = Object.keys(input).reduce((cumm, value) => {
     if (Boolean(config[value])) {

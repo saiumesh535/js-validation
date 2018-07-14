@@ -1,7 +1,7 @@
-import { checkForMissingData, validate } from './validation';
+const validate = require('./validation');
 
 
-export function validate (input, config) {
+exports.validate  = function (input, config) {
   
   if (input === undefined || typeof input !== 'object') {
     throw new Error('Input should be object, also not undefined');
@@ -11,8 +11,8 @@ export function validate (input, config) {
     throw new Error('config should be object, also not undefined');
   }
 
-  const missingData = checkForMissingData(input, config);
-  const errors = missingData.length === 0 && validate(input, config);
+  const missingData = validate.checkForMissingData(input, config);
+  const errors = missingData.length === 0 && validate.validate(input, config);
 
   return !!errors ? [...missingData, ...errors] : missingData;
 
