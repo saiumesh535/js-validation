@@ -10,7 +10,7 @@ You can use this package to reduce boiler plate code for your validation.
 npm i js-validation-check
 ```
 
-###Example
+###Example (JavaScript)
 
 ```js
 
@@ -29,5 +29,31 @@ const input = {
 
 console.log(validation.validate(input, config));
 
+
+```
+
+###Example (TypeScript)
+
+```ts
+
+import { validate, IConfig } from 'js-validation-check';
+
+const input = {
+  email: 'someEmail@gmail.com',
+  checkRegExp: 'ssInput' // your input should contain ss
+}
+
+const config: IConfig = {
+  email: {
+    min: 1,
+    type: 'email'
+  },
+  checkRegExp: {
+    min: 2,
+    regExp: /ss/
+  }
+}
+
+console.log(validate(input, config));
 
 ```

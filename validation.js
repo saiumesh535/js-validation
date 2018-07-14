@@ -44,6 +44,13 @@ const validator = {
     }
     return typedValidations[value](input)
   },
+  regExp: (input, value) => {
+    try{
+      return new RegExp(value).test(input);
+    }catch(error){
+      throw new Error(error);
+    }
+  },
 };
 
 /* typed validations */
