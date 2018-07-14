@@ -5,6 +5,7 @@ export interface IValidation {
   min?: number;
   max?: number;
   type?: Types;
+  regExp?: RegExp;
 }
 
 export interface IConfig {
