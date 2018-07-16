@@ -1,0 +1,39 @@
+# Set up notification options
+notifications: 
+  email:
+    recipients:
+      - lavakumar.dukanam@gmail.com
+      - sai.umesh@gmail.com
+
+    # change is when the repo status goes from pass to fail or vice versa
+    on_success: change
+    on_failure: always
+
+# specify language
+language: node_js
+
+# specify language options
+node_js:
+- '0.10'
+- '0.11'
+
+# configure which branches to run
+branches:
+  # whitelist
+  only:
+    - master
+    - /^deploy-.*$/ # regex ok
+  # blacklist
+  except:
+    - dontrunme 
+    - test 
+
+## begin build steps
+####################
+
+before_install:
+- npm install
+
+after_success:
+- test $TRAVIS_PULL_REQUEST = false
+  && git push

@@ -2,6 +2,8 @@
 
 You can use this package to reduce boiler plate code for your validation.
 
+[![Build Status](https://travis-ci.com/saiumesh535/js-validation.svg?branch=master)](https://travis-ci.com/saiumesh535/js-validation)
+
 ## Getting Started
 
 ### Installing
