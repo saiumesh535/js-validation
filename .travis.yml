@@ -14,8 +14,7 @@ language: node_js
 
 # specify language options
 node_js:
-- '0.10'
-- '0.11'
+- '8.9.4'
 
 # configure which branches to run
 branches:
