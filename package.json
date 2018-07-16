@@ -4,7 +4,7 @@
   "description": "Javascript validations made easy",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/jasmine"
   },
   "bugs": {
     "url": "https://github.com/saiumesh535/js-validation/issues"
@@ -19,5 +19,9 @@
     "js-validation"
   ],
   "author": "sai umesh",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine": "^3.1.0",
+    "jasmine-node": "^1.15.0"
+  }
 }
