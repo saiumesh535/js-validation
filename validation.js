@@ -24,7 +24,7 @@ exports.validate = function (input, config) {
 
 function doValidation(key, input, config) {
   const validation = Object.keys(config[key]).reduce((cumm, value) => {
-    const isValid = validator[value] && validator[value](input[key], config[key][value]);
+    const isValid = !!input[key] && validator[value] && validator[value](input[key], config[key][value]);
     if (!isValid) {
       const errorType = value === 'type' ? config[key][value] : value
       return [...cumm, { for: key, errorType, value: config[key][value] }]
