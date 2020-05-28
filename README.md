@@ -12,7 +12,7 @@ You can use this package to reduce boiler plate code for your validation.
 npm i js-validation-check
 ```
 
-###Example (JavaScript)
+### Example (JavaScript)
 
 ```js
 
@@ -34,7 +34,7 @@ console.log(validation.validate(input, config));
 
 ```
 
-###Example (TypeScript)
+### Example (TypeScript)
 
 ```ts
 
